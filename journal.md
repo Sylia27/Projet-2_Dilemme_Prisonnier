@@ -22,10 +22,22 @@ Ici, c'est ALL-D qui gagne et TFT est deuxiéme.En comparant TFT et ALL-D advers
 points par tour). TFT marque plus contre TESTER et JOSS comparé à ALL-D mais ça ne compense pas l'écart avec RANDOM.
 Parmi les cinq stratégies, seule TFT est « gentille » au sens d'Axelrod (elle
 ne trahit jamais la première). ALL-D, RANDOM, TESTER et JOSS peuvent trahir en
-premier. TFT ne rencontre donc aucune stratégie coopérative. Et comme TFT réussie plus avec des stratégies coopératives \
+premier. TFT ne rencontre donc aucune stratégie coopérative.
 ## Partie 2 
-**Les 2 stratégies choisies:** \([source :](https://www.prisoners-dilemma.com/common-strategy/))\
-Grim trigger: elle coopère jusqu'à la première trahison puis D pour toujours, elle devrait être bonne avec les stratégies qui ne trahissent pas en premier vu qu'elle va coopérer avec elles tout au long. \
-Tit fir Two Tats: coopére et ne joue D que si l'adversaire a joué D deux fois de suite. Bonne face à des stratégies  coopératives  mais moins bonne avec celles qui trahissent de façon isolée (TEST, JOSS,RANDOM) vu qu'elle ne reposte pas à une trahison seule donc les autres stratégies en profitent.\ 
+**Les 2 stratégies choisies:** \([source ](https://www.prisoners-dilemma.com/common-strategy/))\
+Grim trigger: elle coopère jusqu'à la première trahison puis D pour toujours, elle devrait être bonne avec les stratégies qui ne trahissent pas en premier vu qu'elle va coopérer avec elles tout au long.\
+Tit fir Two Tats: coopére et ne joue D que si l'adversaire a joué D deux fois de suite. Bonne face à des stratégies  coopératives  mais moins bonne avec celles qui trahissent de façon isolée (TEST, JOSS,RANDOM) vu qu'elle ne reposte pas à une trahison seule donc les autres stratégies en profitent.\
+**Résultats:**
+![Capture d'écran qui montre le classement de la 2éme partie](Result_part_2.png)
+ Les stratégies "gentilles" (GRIM, TFT, TFTT), qui ne
+trahissent jamais en premier, occupent le haut du classement. Elles font 3000
+entre elles (coopération parfaite). ALL-D qui n'exploite que RANDOM, est
+avant-dernier. Ceci confirme que TFT manquait d'adversaires coopératifs à
+l'étape 1.
 
+**Comparaison avec l'étape 1 :**
+ALL-D passe de la 1re à la 6e place. TFT reste 2e, mais devant ALL-D au lieu
+de derrière. GRIM la devance (+564) car, en plus de coopérer à 3000 avec les
+stratégies gentilles, elle exploite RANDOM comme ALL-D (3542 contre 2496 pour
+TFT). 
 

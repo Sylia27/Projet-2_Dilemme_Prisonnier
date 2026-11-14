@@ -73,7 +73,25 @@ class Joss(Strategy):
         if move == C and rng.random() < self.p:
             return D
         return move
+class Grim(Strategy):
+    """Coopère tant que l'adversaire n'a jamais joué D 
+    dès sa première trahison joue D pour toujours."""
+    name = "GRIM"
 
+    def play(self, own, opp, rng):
+        return D if D in opp else C
+
+
+class TitForTwoTats(Strategy):
+    """C au premier tour  ensuite D seulement si l'adversaire
+    a joué D aux deux derniers tours"""
+    name = "TIT-FOR-TWO-TATS"
+
+    def play(self, own, opp, rng):
+        if len(opp) >= 2 and opp[-1] == D and opp[-2] == D:
+            return D
+        return C
 
 
 STRATS = [AllD, Random, TitForTat, Tester, Joss]
+STRATS_ETENDU = [AllD,Random,TitForTat,Tester,Joss,Grim,TitForTwoTats]
