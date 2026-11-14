@@ -40,4 +40,35 @@ ALL-D passe de la 1re à la 6e place. TFT reste 2e, mais devant ALL-D au lieu
 de derrière. GRIM la devance (+564) car, en plus de coopérer à 3000 avec les
 stratégies gentilles, elle exploite RANDOM comme ALL-D (3542 contre 2496 pour
 TFT). 
+## Partie 3
+
+## Justification du choix des deux modifications
+**Bruit :** à l'étape 2, GRIM et TIT-FOR-TWO-TATS ont réagi très différemment aux trahisons (GRIM ne pardonne jamais, TFTT ignore une trahison isolée). Le bruit introduit des trahisons accidentelles, donc je veux voir laquelle de mes stratégies y résiste le mieux.
+
+**Horizon inconnu :** le tournoi de base suppose une durée fixe et connue de 200 tours. avec un horizon inconnu, la partie continue avec une probabilité w, ce qui permet de voir si le classement change quand on ne sait plus quand elle s'arrête.
+
+
+
+
+## Modification 1 : bruit
+
+À chaque tour, chaque joueur a 5 % de chances que son coup soit inversé (C devient D, ou D devient C). Le coup inversé est celui qui est vraiment joué, il compte dans les gains et il apparaît dans l'historique, donc les deux joueurs le voient. Les deux joueurs sont tirés séparément.
+
+**Prédiction**
+ Avec environ 10 erreurs par joueur et par partie, la capacité à
+  pardonner devient décisive. GRIM est la plus pénalisée, dans le sens où une seule inversion (la sienne ou celle de l'adversaire) lui fait voir un D, et elle joue D pour toujours ça lui fait perdre la coopération.TFTT devrait être la plus robuste, une seule trahison isolée ne la fait pas riposter. ALL-D devrait peu changer, il joue D de toute façon, et le bruit ne fait que lui
+    faire jouer C par erreur de temps en temps.
+- Classement attendu : 1 TIT-FOR-TWO-TATS, 2 TIT-FOR-TAT, 3 TESTER, 4 JOSS, 
+  et la 3 derniéres places entre RANDOM, Grim et ALL-D.
+
+
+
+
+
+## Modification 2 : horizon inconnu
+
+Après chaque tour, la partie continue avec la probabilité w et s'arrête sinon. La durée moyenne est 1 / (1 − w) tours. Comme les parties n'ont plus la même longueur, je compare les classements, pas les totaux de points.
+ 
+**Prédiction**
+le poids du premier tour change. Dans une partie courte, le 5 gagné en trahissant au tour 1 compte beaucoup plus. ALL-D et TESTER devraient donc monter quand w diminue, alors que la coopération mutuelle à 3 points par tour (TFT, GRIM, TFTT) a moins le temps de s'installer et d'accumuler l'avance qu'elle avait à l'étape 2.
 
