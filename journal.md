@@ -17,6 +17,15 @@ TIT-FOR-TAT: premier coup C, puis à chaque tour elle rejoue le dernier coup de 
 TESTER: tour 1 = D (provocation)puis tour 2 = C (on observe la réaction). Si l'adversaire a joué D au tour 2(riposte)  TESTER joue comme TIT-FOR-TAT ensuite. Sinon il répète C, C, D (un D tous les trois tours à partir du tour 4)\
  **Résultats :**
  ![Capture d'écran qui montre le classement de la 1ére partie](Result_part_1.png)
-
+Ici, c'est ALL-D qui gagne et TFT est deuxiéme.En comparant TFT et ALL-D adversaire par adversaire nous constatons que l'avance de ALL-D vient quasiment de RANDOM ( un écart de 923 contre TFT) car ALL-D exploite sa coopération ( 1 fois sur deux), il prend 5 points quand RANDOM joue C et 2c quand il joue D soit 3,5 en moyenne par tour là où TFT prend en moyenne 2,5 par tour (comme TFT copie le coup précédent de RANDOM et que ce coup est indépendant de celui que RANDOM joue au tour courant, donc les quatre combinaisons (C,C), (C,D), (D,C),
+(D,D) ont la même probabilité; D'où Le gain moyen de TFT  (3 + 0 + 5 + 2) / 4 = 2,5
+points par tour). TFT marque plus contre TESTER et JOSS comparé à ALL-D mais ça ne compense pas l'écart avec RANDOM.
+Parmi les cinq stratégies, seule TFT est « gentille » au sens d'Axelrod (elle
+ne trahit jamais la première). ALL-D, RANDOM, TESTER et JOSS peuvent trahir en
+premier. TFT ne rencontre donc aucune stratégie coopérative. Et comme TFT réussie plus avec des stratégies coopératives \
+## Partie 2 
+**Les 2 stratégies choisies:** \([source :](https://www.prisoners-dilemma.com/common-strategy/))\
+Grim trigger: elle coopère jusqu'à la première trahison puis D pour toujours, elle devrait être bonne avec les stratégies qui ne trahissent pas en premier vu qu'elle va coopérer avec elles tout au long. \
+Tit fir Two Tats: coopére et ne joue D que si l'adversaire a joué D deux fois de suite. Bonne face à des stratégies  coopératives  mais moins bonne avec celles qui trahissent de façon isolée (TEST, JOSS,RANDOM) vu qu'elle ne reposte pas à une trahison seule donc les autres stratégies en profitent.\ 
 
 
